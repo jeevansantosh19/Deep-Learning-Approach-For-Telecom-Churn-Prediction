@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+
+        <div class="results-box">
+            <p><strong>Gender:</strong> {{ gender }}</p>
+            <p><strong>Senior Citizen:</strong> {{ senior_citizen }}</p>
+            <p><strong>Partner:</strong> {{ partner }}</p>
+            <p><strong>Dependents:</strong> {{ dependents }}</p>
+            <p><strong>Tenure:</strong> {{ tenure }}</p>
+            <p><strong>Phone Service:</strong> {{ phone_service }}</p>
+            <p><strong>Multiple Lines:</strong> {{ multiple_lines }}</p>
+            <p><strong>Internet Service:</strong> {{ internet_service }}</p>
+            <p><strong>Online Security:</strong> {{ online_security }}</p>
+            <p><strong>Online Backup:</strong> {{ online_backup }}</p>
+            <p><strong>Device Protection:</strong> {{ device_protection }}</p>
+            <p><strong>Tech Support:</strong> {{ tech_support }}</p>
+            <p><strong>Streaming TV:</strong> {{ streaming_tv }}</p>
+            <p><strong>Streaming Movies:</strong> {{ streaming_movies }}</p>
+            <p><strong>Contract:</strong> {{ contract }}</p>
+            <p><strong>Paperless Billing:</strong> {{ paperless_billing }}</p>
+            <p><strong>Payment Method:</strong> {{ payment_method }}</p>
+            <p><strong>Monthly Charges:</strong> {{ monthly_charges }}</p>
+            <p><strong>Total Charges:</strong> {{ total_charges }}</p>
+        </div>
+
+        <div class="prediction-box">
+            <h2>Churn Prediction</h2>
+            <p class="{{ 'prediction-yes' if churn_status.startswith('Customer is likely') else 'prediction-no' }}">
+                {{ churn_status }}
+            </p>
+            <p><strong>Prediction Probability:</strong> {{ prediction_value }}</p>
+            <p>{{ next_step }}</p>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="btn-back">Back to Home</a>
+    </div>
+</body>
+</html>

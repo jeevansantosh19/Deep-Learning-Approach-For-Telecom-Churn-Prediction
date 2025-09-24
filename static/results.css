@@ -1,0 +1,89 @@
+/* Background & font */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #f8fafc;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(14px);
+    padding: 32px 42px;
+    border-radius: 18px;
+    max-width: 650px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 22px;
+    color: #e2e8f0;
+}
+
+/* Results display */
+.results-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.results-box p {
+    margin: 6px 0;
+    color: #cbd5e1;
+}
+
+/* Prediction box */
+.prediction-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.prediction-box h2 {
+    margin: 0 0 12px 0;
+}
+
+/* Dynamic colors */
+.prediction-yes {
+    color: #f87171; /* Soft red */
+    font-weight: 700;
+}
+
+.prediction-no {
+    color: #4ade80; /* Soft green */
+    font-weight: 700;
+}
+
+/* Back button */
+.btn-back {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-back:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
+}
